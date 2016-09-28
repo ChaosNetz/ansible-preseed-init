@@ -1,0 +1,4 @@
+- hosts: localhost
+  user: root
+  roles:
+  - ansible-flueschmiede
