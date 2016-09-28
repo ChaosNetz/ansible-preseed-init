@@ -1,2 +1,4 @@
 # ansible-preseed-init
-Ansible-Rollen für in der debian-installer stage
+Ansible-configuration for the debian-installer stage.
+
+Each branch of this repo contains a differnt configuration for different purposes.
