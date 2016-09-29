@@ -1,0 +1,6 @@
+---
+- name: Copy Inventur-Script
+  copy: src=files/inventur.sh dest=/usr/local/bin/iventur.sh owner=root group=root mode=0755
+
+- name: Execute Inventur-Script
+  shell: /usr/local/bin/iventur.sh
