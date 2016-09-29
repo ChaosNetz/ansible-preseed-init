@@ -1,4 +1,5 @@
 #!/bin/bash
+fn="`date +%s`"
 lshw > /tmp/$fn
 sn="`cat /tmp/$fn | egrep -oi 'serial:.*' | head -n 1 | cut -d\  --fields=2`"
 mv /tmp/$fn /tmp/$sn-$fn
