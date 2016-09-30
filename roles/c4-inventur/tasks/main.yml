@@ -6,6 +6,7 @@
   apt: name="{{ item }}" update_cache=yes
   with_items:
   - lshw
+  - vim
 
 - name: Execute Inventur-Script
   shell: /usr/local/bin/iventur.sh
