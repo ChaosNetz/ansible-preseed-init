@@ -1,4 +1,6 @@
 #!/bin/bash
+export LC_ALL=C
+
 fn="`date +%s`"
 lshw > /tmp/$fn
 sn="`cat /tmp/$fn | egrep -oi 'serial:.*' | head -n 1 | cut -d\  --fields=2`"
