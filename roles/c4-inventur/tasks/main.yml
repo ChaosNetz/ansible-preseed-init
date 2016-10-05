@@ -2,6 +2,9 @@
 - name: Copy Inventur-Script
   copy: src=files/inventur.sh dest=/usr/local/bin/iventur.sh owner=root group=root mode=0755
 
+- name: Copy Serial-Script
+  copy: src=files/serial.py dest=/usr/local/bin/serial.py owner=root group=root mode=0755
+
 - name: Installing lshw
   apt: name="{{ item }}" update_cache=yes
   with_items:
