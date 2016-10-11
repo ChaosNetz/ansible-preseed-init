@@ -1,0 +1,14 @@
+---
+- name: Copy hostname.sh
+  copy: src=files/hostname.sh dest=/usr/local/bin/hostname.sh owner=root group=root mode=0755
+
+- name: Copy Serial-Script
+  copy: src=files/serial.py dest=/usr/local/bin/serial.py owner=root group=root mode=0755
+
+- name: Installing curl
+  apt: name="{{ item }}" update_cache=yes
+  with_items:
+  - curl
+
+- name: Execute Hostname
+  shell: /usr/local/bin/hostname.sh
