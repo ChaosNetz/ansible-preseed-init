@@ -6,6 +6,7 @@
   apt: name="{{ item }}" update_cache=yes
   with_items:
   - curl
-
+  - ca-cacert
+   
 - name: Execute Hostname
   shell: /usr/local/bin/hostname.sh
