@@ -12,7 +12,7 @@
   with_items:
   - openssh-server
   - avahi-daemon
-- name: SSH: Reject passwords
+- name: "SSH: Reject passwords"
   lineinfile:
     dest: /etc/ssh/sshd_config
     regexp: "^PasswordAuthentication"  
