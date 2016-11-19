@@ -7,6 +7,17 @@
   with_items:
   - curl
   - ca-cacert
-   
-- name: Execute Hostname
-  shell: /usr/local/bin/hostname.sh
+  
+- name: Generating Hostname
+  command: /usr/local/bin/hostname.sh
+  register: g_name
+
+- name: Setting Hostname
+  hostname: {{ g_name.stdout }}.ws.chaosnetz.org
+
+- name: Mapping Hostname to 127.0.0.1
+  blockinfile:
+    marker: "# {mark} ANSIBLE GENERATED HOSTNAME"
+    dest: /etc/hosts
+    block: |
+      127.0.0.1 {{ g_name.stdout }} {{ g_name.stdout }}.ws.chaosnetz.org  
