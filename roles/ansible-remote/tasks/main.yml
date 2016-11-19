@@ -1,0 +1,21 @@
+---
+- user: name=ansible comment="Ansible (Deployment)" group=ansible
+- name: ansible can sudo
+  lineinfile:
+    dest: /etc/sudoers
+    regexp: "^ansible"
+    line: "ansible  ALL = NOPASSWD: ALL" 
+- name: Registering SSH-Key
+  authorized_key: user=ansible key="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKeNimxgNAqXvcbFHNLS+YTsfe8Zazy9MklHx+hmNdqm jan@Daisy"
+- name: Installing ssh-Server, avahi
+  apt: name="{{ item }}" update_cache=yes
+  with_items:
+  - openssh-server
+  - avahi-daemon
+- name: SSH: Reject passwords
+  lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: "^PasswordAuthentication"  
+    line: "PasswordAuthentication no"
+- name: Publish ansible service
+  copy: src=files/ansible.service dest=/etc/avahi/services/ansible.service owner=root group=root mode=0644
