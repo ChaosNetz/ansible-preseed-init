@@ -1,4 +1,5 @@
 ---
+- group: name=ansible state=present
 - user: name=ansible comment="Ansible (Deployment)" group=ansible
 - name: ansible can sudo
   lineinfile:
