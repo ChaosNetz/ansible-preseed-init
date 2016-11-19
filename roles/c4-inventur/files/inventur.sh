@@ -5,5 +5,5 @@ fn="`date +%s`"
 lshw -json > /tmp/$fn
 sn="`python2 /usr/local/bin/serial.py /tmp/$fn`"
 mv /tmp/$fn /tmp/$sn-$fn
-curl -u ftp:ftp -T /tmp/$sn-$fn ftp://trillian.labor.koeln.ccc.de/incoming/inventory/
+curl -F "lshw=@/tmp/$sn-$fn" https://icvpn1.chaosnetz.org:8989/pxe/lshw/$(echo -ne `hostname`)
 
