@@ -13,7 +13,7 @@
   register: g_name
 
 - name: Setting Hostname
-  hostname: "{{ g_name.stdout }}.ws.chaosnetz.org"
+  hostname: name="{{ g_name.stdout }}.ws.chaosnetz.org"
 
 - name: Mapping Hostname to 127.0.0.1
   blockinfile:
