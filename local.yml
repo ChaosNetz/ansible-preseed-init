@@ -6,4 +6,11 @@
   - c4-inventur
   - ansible-flueschmiede
   - ansible-remote
-
+  tasks:
+  - name: Create user chaosnetz-bsp
+    user:
+      name: chasonetz-bsp
+      shell: /bin/bash
+      createhome: yes
+      password: "{{ 'chaosnetz-bsp' |password_hash('sha512') }}"
+    register: chaosnetz-bsp
