@@ -1,3 +1,6 @@
 [submodule "roles/ansible-flueschmiede"]
 	path = roles/ansible-flueschmiede
 	url = https://github.com/anderscore-gmbh/ansible-flueschmiede.git
+[submodule "roles/ansible-role-chrome"]
+	path = roles/ansible-role-chrome
+	url = https://github.com/ChaosNetz/ansible-role-chrome.git

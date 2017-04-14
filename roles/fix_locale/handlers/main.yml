@@ -1,3 +1,0 @@
----
-- name: generate_locales
-  command: locale-gen

@@ -1,9 +1,8 @@
 - hosts: localhost
   user: root
   roles:
-  - fix_locale
   - hostname
   - c4-inventur
   - ansible-flueschmiede
   - ansible-remote
-
+  - cmprescott.chrome
