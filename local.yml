@@ -1,6 +1,7 @@
 - hosts: localhost
   user: root
   roles:
+  - apt-common
   - hostname
   - c4-inventur
   - ansible-remote

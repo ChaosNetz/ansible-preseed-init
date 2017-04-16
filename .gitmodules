@@ -4,3 +4,6 @@
 [submodule "roles/google-chrome"]
 	path = roles/google-chrome
 	url = https://github.com/ChaosNetz/ansible-role-chrome.git
+[submodule "roles/apt-common"]
+	path = roles/apt-common
+	url = https://github.com/ChaosNetz/ansible-apt-common
