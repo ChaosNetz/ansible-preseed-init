@@ -4,4 +4,4 @@
   - hostname
   - c4-inventur
   - ansible-remote
-  - ansible-role-chrome
+  - google-chrome
