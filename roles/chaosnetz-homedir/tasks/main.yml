@@ -1,2 +1,6 @@
-- name: "Unpacking Homedirectory"
-
+- name: "Unpacking /home/chaosnetz"
+  unarchive:
+    src: home-chaosnetz.tar.xz
+    dest: /home
+    owner: chaosnetz
+    group: chaosnetz
