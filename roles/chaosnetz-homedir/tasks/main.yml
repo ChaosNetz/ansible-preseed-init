@@ -4,3 +4,4 @@
     dest: /home
     owner: chaosnetz
     group: chaosnetz
+    creates: /home/chaosnetz/.config/google-chrome
