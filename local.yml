@@ -3,5 +3,5 @@
   roles:
   - hostname
   - c4-inventur
-  - ansible-flueschmiede
   - ansible-remote
+  - ansible-role-chrome
