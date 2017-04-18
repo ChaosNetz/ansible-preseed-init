@@ -1,7 +1,6 @@
 - hosts: localhost
   user: root
   roles:
-  - fix_locale
   - apt-common
   - hostname
   - c4-inventur
