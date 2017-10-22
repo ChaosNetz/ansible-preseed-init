@@ -7,3 +7,6 @@
 [submodule "roles/apt-common"]
 	path = roles/apt-common
 	url = https://github.com/ChaosNetz/ansible-apt-common
+[submodule "roles/chaosnetz-user"]
+	path = roles/chaosnetz-user
+	url = https://github.com/ChaosNetz/ansible-role-chaosnetz-user.git
