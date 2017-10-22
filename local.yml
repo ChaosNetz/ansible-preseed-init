@@ -2,6 +2,7 @@
   user: root
   roles:
   - apt-common
+  - chaosnetz-user
   - hostname
   - c4-inventur
   - ansible-remote
