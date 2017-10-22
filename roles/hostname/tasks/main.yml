@@ -6,7 +6,6 @@
   apt: name="{{ item }}" update_cache=yes
   with_items:
   - curl
-  - ca-cacert
   
 - name: Generating Hostname
   command: /usr/local/bin/hostname.sh

@@ -7,7 +7,7 @@
   with_items:
   - lshw
   - vim
-  - ca-cacert
+  - curl
     
 - name: Execute Inventur-Script
   shell: /usr/local/bin/iventur.sh
